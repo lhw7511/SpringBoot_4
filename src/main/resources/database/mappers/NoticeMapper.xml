@@ -20,6 +20,9 @@
 	 		like concat('%', #{search},'%')
 	</sql>
 
+	<select id="getFile" parameterType="FileVO" resultType="FileVO">
+		select * from noticefiles where fnum=#{fnum}
+	</select>
 
 	<insert id="setInsert" parameterType="NoticeVO"  useGeneratedKeys="true" keyProperty="num">
 		insert into notice values(#{num},#{title},#{writer},#{contents},sysdate(),0)

@@ -21,6 +21,10 @@
 	</sql>
 
 	
+	<select id="getFile" parameterType="FileVO" resultType="FileVO">
+		select * from qnafiles where fnum=#{fnum}
+	</select>
+	
 	<update id="setReplyUpdate" parameterType="QnaVO">
 		update qna set step=step+1 where 
 		ref= (select *  from (select ref from qna where num=#{num}) as r)

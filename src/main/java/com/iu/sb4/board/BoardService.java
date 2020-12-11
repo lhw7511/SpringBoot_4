@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.web.multipart.MultipartFile;
 
+import com.iu.sb4.board.file.FileVO;
 import com.iu.sb4.util.Pager;
 
 public interface BoardService {
@@ -19,4 +20,6 @@ public interface BoardService {
 	public int setUpdate(BoardVO boardVO)throws Exception;
 	
 	public long getCount(Pager pager)throws Exception;
+	
+	public FileVO getFile(FileVO fileVO)throws Exception;
 }

@@ -99,4 +99,9 @@ public class QnaService implements BoardService{
 		return 0;
 	}
 
+	@Override
+	public FileVO getFile(FileVO fileVO) throws Exception {
+		return qnaMapper.getFile(fileVO);
+	}
+
 }

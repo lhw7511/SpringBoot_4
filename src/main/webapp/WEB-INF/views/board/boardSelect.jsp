@@ -22,7 +22,9 @@
 
 <c:forEach items="${dto.fileVOs}" var="vo">
 <img alt="" src="../upload/${board}/${vo.fileName}">
-<p><a href="./noticeFileDown?fnum=${vo.fnum}">${vo.oriName}</a> </p>
+ 
+
+<p><a href="./${board}FileDown?fnum=${vo.fnum}">${vo.oriName}</a> </p>
 </c:forEach>
 
 
